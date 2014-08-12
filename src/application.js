@@ -15,7 +15,7 @@ $(function(){
     // add a category
     addCategory: function(categoryID) {
       var array = this.get("categories");
-      array.push(categoryID));
+      array.push(categoryID);
       this.set({"categories": array});
       this.save();
       this.trigger("add:categories", Categories.get(categoryID));
@@ -52,12 +52,11 @@ $(function(){
     localStorage: new Backbone.LocalStorage("backbone-note")
   });
   
-  window.Stickies = new Stickynotes();
+  window.Notes = new NoteList();
   
   // Note view
   // ---------
-  
-  
+ 
   // Category model
   // -----------
   window.Category = Backbone.Model.Extend({
@@ -98,7 +97,6 @@ $(function(){
   // Category view
   // -------------
   
-    
   // The application
   // ---------------
   
